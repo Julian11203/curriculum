@@ -1,6 +1,6 @@
-# CERTIFICADOS
-# - SENA
+# Certificados
+- SENA
 ![](IMG/Sena-Certificado-ProgramacionSoftware.jpg)
 
-# - Udemy
+- Udemy
 ![](IMG/Udemy-Certificado-Spring.jpg)
