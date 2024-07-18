@@ -7,4 +7,4 @@
 
 ![](IMG/Udemy-Certificado-Spring.jpg)
 
-![](IMG/CertLab. AGR.jpg)
+![](IMG/CertLab-AGR.jpg)
