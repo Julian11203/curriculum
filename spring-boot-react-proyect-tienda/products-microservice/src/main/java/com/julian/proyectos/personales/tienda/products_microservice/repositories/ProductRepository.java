@@ -3,6 +3,7 @@ package com.julian.proyectos.personales.tienda.products_microservice.repositorie
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.julian.proyectos.personales.tienda.libs_commons.models.Product;
@@ -10,8 +11,12 @@ import com.julian.proyectos.personales.tienda.libs_commons.models.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long>{
 
-    Optional<Product> findByName(String name);
-
-    void deleteByName(String name);
+	@Query("""
+			SELECT p
+			FROM Product p
+			WHERE CAST(p.id AS string) = :value
+			   OR p.name = :value
+			""")
+	Optional<Product> findProductByIdOrName(String value);
 
 }
